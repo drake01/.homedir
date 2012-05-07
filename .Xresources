@@ -1,0 +1,40 @@
+XTerm*faceName:           terminus:pixelsize=14
+!UXTerm*faceName:           Terminus:pixelsize=14
+UXTerm*font: -*-Terminus-medium-r-*-*-14-*-*-*-*-*-iso8859-*
+UXTerm*faceSize: 10
+
+
+!UXTerm*faceName: DejaVu Sans Mono
+!UXTerm*faceSize: 9
+
+!Uxterm.Font:    Terminus:pixelsize=14
+
+
+!UXTerm*faceName:           Inconsolata:pixelsize=15
+!UXTerm*faceName:           terminus:pixelsize=14
+!UXTerm*faceName:           Terminus:style=Regular:pixelsize=14
+!UXTerm*faceName:           ttf-inconsolata:style=Regular:pixelsize=14
+!XTerm*faceName:           terminus:pixelsize=14
+!UXTerm*faceName:        -misc-fixed-medium-r-normal--10-100-75-75-c-60-iso10646-1
+!UXTerm*faceName:            -*-terminus-*-r-normal-*-12-*-*-*-*-*-iso8859-*
+!UXTerm*faceName:            -xos4-terminus-medium-*-*-*-14-*-*-72-*-*-ibm-*
+!UXTerm*font:                 -*-terminus-*-*-*-*-12-*-*-*-*-*-ibm-cp850-*
+!UXTerm*faceSize:           12
+XTerm*saveLines:          9999
+UXTerm*saveLines:          9999
+XTerm*cursorUnderLine: true
+UXTerm*cursorUnderLine: true
+xterm*scrollBar:          false
+Uxterm*scrollBar:          false
+Xterm*background:  #000000
+UXterm*background:  #000000
+*customization: -color
+XTerm*termName: xterm-256color
+UXTerm*termName: xterm-256color
+UXTerm*altIsNotMeta: true
+UXTerm*metaSendsEscape: true
+UXTerm*altSendsEscape: true
+UXTerm*eightBitInput: false
+
+!copy and paste trouble
+UXTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
