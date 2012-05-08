@@ -87,6 +87,11 @@ if getcwd() =~ '/nmap'
     set shiftwidth=2
     set copyindent
 endif
+" Vim plugins from go project"
+  set rtp+=$GOROOT/misc/vim
+  filetype plugin indent on
+  syntax on
+
 
 
 " VIM Configuration File

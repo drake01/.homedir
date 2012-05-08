@@ -1,0 +1,46 @@
+set editing-mode vi
+#set editing-mode vi set keymap vi
+set keymap vi 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# Configuration file for readline.
+
+
+# Only one <tab> is necessary to get a list of all possible options.
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+
+# Always complete all items no matter how many there are.
+set completion-query-items -1
+# And make sure we use a pager for completions (this is also the default).
+set page-completions on
+
+# Add character to files denoting the type when completing file names.
+set visible-stats on
+
+# Activate Vi editing mode.
+set editing-mode vi
+
+
+# KEY BINDINGS
+
+# Use jj and jk to exit insert mode.
+"jj": vi-movement-mode
+"jk": vi-movement-mode
+
+"\C-p": previous-history
+"\C-n": next-history
+
+# Edit using a single line:
+#set horizontal-scroll-mode On
+
+# Rebind some keys:
+Meta-h: backward-kill-word
+"\C-u": universal-argument
+"\C-x\C-r": re-read-init-file
+
+#Meta key not working in uxterm
+    set meta-flag on
+    set convert-meta off
+    set output-meta on
+
+#####
