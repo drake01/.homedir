@@ -1,6 +1,7 @@
 XTerm*faceName:           terminus:pixelsize=14
 !UXTerm*faceName:           Terminus:pixelsize=14
 UXTerm*font: -*-Terminus-medium-r-*-*-14-*-*-*-*-*-iso8859-*
+XTerm*font: -*-Terminus-medium-r-*-*-14-*-*-*-*-*-iso8859-*
 UXTerm*faceSize: 10
 
 

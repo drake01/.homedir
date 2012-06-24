@@ -1,3 +1,6 @@
+" About: The file contains extra configuration options . This file is sourced
+" by .vimrc which contains the major configurations as set by the spf13-vim package 
+"
 " Two semicolons are easy to type.
 :imap ;; <Esc>
 
@@ -69,7 +72,7 @@ nnoremap <Leader>h :call ViewHtmlText(@*)<CR>
   syntax on
 
 " for more than default tabs in vim 
-    set tabpagemax=100
+    set tabpagemax=150
 
 "if (&term == 'xterm' || &term =~? '^screen')
 if (&term != 'linux') 
