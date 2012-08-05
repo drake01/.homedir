@@ -2,7 +2,7 @@
 " by .vimrc which contains the major configurations as set by the spf13-vim package 
 "
 " Two semicolons are easy to type.
-:imap ;; <Esc>
+imap ;; <Esc>
 
 "http://vim.wikia.com/wiki/Switch_between_Vim_window_splits_easily
 "
@@ -11,10 +11,14 @@ map <C-K> <C-W>k<C-W>_
 
 
 set wrap
+set nobackup
 
 set wmh=0
 
 set scrolloff=1
+set textwidth=80
+
+"colorscheme synic
 
 "inoremap jj <Esc>
 
@@ -95,6 +99,11 @@ endif
   filetype plugin indent on
   syntax on
 
+
+" for tags
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+"autocmd FileType c setlocal foldmethod=syntax
 
 
 " VIM Configuration File
