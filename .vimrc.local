@@ -17,6 +17,7 @@ set wmh=0
 
 set scrolloff=1
 set textwidth=80
+set textwidth=72
 
 "colorscheme synic
 
@@ -76,7 +77,7 @@ nnoremap <Leader>h :call ViewHtmlText(@*)<CR>
   syntax on
 
 " for more than default tabs in vim 
-    set tabpagemax=150
+    set tabpagemax=280
 
 "if (&term == 'xterm' || &term =~? '^screen')
 if (&term != 'linux') 

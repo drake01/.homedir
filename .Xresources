@@ -21,8 +21,9 @@ UXTerm*faceSize: 10
 !UXTerm*faceName:            -xos4-terminus-medium-*-*-*-14-*-*-72-*-*-ibm-*
 !UXTerm*font:                 -*-terminus-*-*-*-*-12-*-*-*-*-*-ibm-cp850-*
 !UXTerm*faceSize:           12
-XTerm*saveLines:          9999
-UXTerm*saveLines:          9999
+XTerm*saveLines:          9999999
+UXTerm*saveLines:          9999999
+!UXTerm*saveLines:          999999999999
 XTerm*cursorUnderLine: true
 UXTerm*cursorUnderLine: true
 xterm*scrollBar:          false
