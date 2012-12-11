@@ -104,6 +104,17 @@ endif
 " for tags
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+
+"gtags
+"map <C-]> :Gtags<CR><CR>
+"map <C-\> :Gtags -r<CR><CR>
+"map <F10> :cclose<CR>
+"map <F11> :cp<CR>
+"map <F12> :cn<CR>
+
+
+
 "autocmd FileType c setlocal foldmethod=syntax
 
 

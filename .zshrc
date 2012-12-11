@@ -319,9 +319,18 @@ prompt_precmd() {
     width_right=${#${(S%%)top_right//$~zero/}}
     width=$(( COLUMNS - width_left - width_right ))
 
-    PROMPT="$blue%B$top_left${(l:$width::-:)}%b$default$top_right
-$blue%B'%b$default\
-$green%B%n%b$default@$green%B%m%b$default %(1j.$yellow%j$default.)%# \
+#    PROMPT="$blue%B$top_left${(l:$width::-:)}%b$default$top_right
+#$blue%B'%b$default\
+#$green%n%b$default@$green%B%m%b$default %(1j.$yellow%j$default.)%# \
+#%(?..($red%B%?%b$default%) )"
+
+#    PROMPT="$blue%B$top_left${(l:$width::-:)}%b$default$top_right
+#$blue%B'%b$default\
+#$green%B%n%b$default@$green%B%m%b$default %(1j.$yellow%j$default.)%# \
+#%(?..($red%B%?%b$default%) )"
+    PROMPT="$blue$top_left${(l:$width::-:)}$default$top_right
+$blue%B%b$default\
+$green$default$green%B%m%b$default%(1j.$yellow%j$default.)%# \
 %(?..($red%B%?%b$default%) )"
 }
 add-zsh-hook precmd prompt_precmd

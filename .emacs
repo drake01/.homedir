@@ -285,7 +285,7 @@
 
 ;    (add-to-list 'load-path "~/.emacs.d/elisp/")
 
-    (add-to-list 'load-path "~/emacs/slime/slime/")  ; your SLIME directory
+    (add-to-list 'load-path "~/slime/")  ; your SLIME directory
     (setq inferior-lisp-program "/usr/bin/sbcl") ; your Lisp system
     (require 'slime)
     (slime-setup)
@@ -308,6 +308,6 @@
 
 (global-set-key "\M-;" 'ww-next-gtag)   ;; M-; cycles to next result, after doing M-. C-M-. or C-M-,
 (global-set-key "\M-." 'gtags-find-tag) ;; M-. finds tag
+;(global-set-key [(control meta ,)] 'gtags-find-symbol)
+;(global-set-key [(control meta ,)] 'gtags-find-symbol)   ;; C-M-, find all references of tag
 (global-set-key [(control meta .)] 'gtags-find-rtag)   ;; C-M-. find all references of tag
-(global-set-key [(control meta ,)] 'gtags-find-symbol) ;; C-M-, find all usages of symbol.
-
