@@ -1,0 +1,72 @@
+# tig configuration file.
+
+
+# Show the revision graph like gitk does.
+set show-rev-graph = yes
+
+# Use relative dates.
+set show-date = relative
+
+
+# BINDINGS
+
+# Allow moving in the main menu while displaying a diff in the bottom of the
+# screen.
+bind generic J next
+bind generic K previous
+
+# Mutt like bindings to move to first and last line.
+bind generic = move-first-line
+bind generic * move-last-line
+
+# Close current view like in mutt.
+bind diff i view-close
+
+# Unbind commands which may change the repository. I use tig only as a viewer.
+bind generic u none
+bind generic ! none
+bind generic M none
+bind generic @ none
+bind generic e none
+bind generic G none
+bind generic C none
+bind generic i none
+
+
+# COLORS
+
+# Try to mimic gitk's colors.
+
+color date      default default
+color delimiter default default # ~ if text is too long
+
+# Main window.
+color cursor         black   cyan         # currently selected line
+color main-author    default default      # just 'author' in newer versions
+color main-head      green   default bold # HEAD
+color main-ref       green   default      # branches
+color main-remote    yellow  default      # remote branches
+color main-tag       yellow  default bold # tags
+color main-local-tag yellow  default bold # local tags (normal tags)
+
+# Information at the top of the commit diff.
+color commit    default default
+color pp-adate  default default
+color pp-cdate  default default
+color pp-author default default
+color pp-commit default default
+color pp-merge  default default
+color pp-date   default default
+color pp-adate  default default
+color pp-cdate  default default
+color pp-refs   default default
+# Special parts of the commit message.
+color signoff   default default
+color acked     default default
+
+# Diff coloring.
+color diff-header default default bold # diff --git a/.. b/..
+color diff-index  default default bold # index abc..def
+color diff-chunk  cyan    default      # @@ -.. +.. @@
+
+# vim: ft=muttrc
