@@ -44,3 +44,8 @@ Meta-h: backward-kill-word
     set output-meta on
 
 #####
+#https://coderwall.com/p/oqtj8w
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+set show-all-if-ambiguous on
+set completion-ignore-case on

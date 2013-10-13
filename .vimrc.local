@@ -18,6 +18,7 @@ set wmh=0
 set scrolloff=1
 set textwidth=80
 set textwidth=72
+nnoremap 0 g0
 
 "colorscheme synic
 
@@ -104,6 +105,7 @@ endif
 " for tags
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+nnoremap \ ,
 
 
 "gtags
