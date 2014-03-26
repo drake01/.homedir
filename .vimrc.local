@@ -19,6 +19,9 @@ set scrolloff=1
 set textwidth=80
 set textwidth=72
 nnoremap 0 g0
+map <F11> :N<CR>
+map <F12> :n<CR>
+"map <C-N> :n<CR>
 
 "colorscheme synic
 
