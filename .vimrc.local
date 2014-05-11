@@ -21,7 +21,19 @@ set textwidth=72
 nnoremap 0 g0
 map <F11> :N<CR>
 map <F12> :n<CR>
-"map <C-N> :n<CR>
+map <F9> :N<CR>
+map <F10> :n<CR>
+"let g:airline_powerline_fonts=0
+"map <C-9> :n<CR>
+"map <C-8> :N<CR>
+"map <C-Y> :n<CR>
+map <C-H> :N<CR>
+map <C-L> :n<CR>
+map H :N<CR>
+map L :n<CR>
+"let g:airline_powerline_fonts = 0
+"unlet g:airline_left_sep
+"unlet g:airline_right_sep
 
 "colorscheme synic
 
