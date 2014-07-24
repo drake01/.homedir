@@ -31,6 +31,7 @@ map <C-H> :N<CR>
 map <C-L> :n<CR>
 map H :N<CR>
 map L :n<CR>
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 "let g:airline_powerline_fonts = 0
 "unlet g:airline_left_sep
 "unlet g:airline_right_sep
