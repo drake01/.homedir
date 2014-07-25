@@ -18,6 +18,7 @@ set wmh=0
 set scrolloff=1
 set textwidth=80
 set textwidth=72
+set textwidth=79
 nnoremap 0 g0
 map <F11> :N<CR>
 map <F12> :n<CR>
@@ -122,7 +123,8 @@ endif
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 nnoremap \ ,
-
+set nospell
+map Z :%g/^\s*$/d<CR>``
 
 "gtags
 "map <C-]> :Gtags<CR><CR>

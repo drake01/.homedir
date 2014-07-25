@@ -1,13 +1,27 @@
-XTerm*faceName:           terminus:pixelsize=14
+!XTerm*faceName:           terminus:pixelsize=14
 !UXTerm*faceName:           Terminus:pixelsize=14
 !UXTerm*font: -*-Terminus-medium-r-*-*-14-*-*-*-*-*-iso8859-*
 !XTerm*font: -*-Terminus-medium-r-*-*-14-*-*-*-*-*-iso8859-*
-UXTerm*font: Terminus-14
-XTerm*font: Terminus-14
-!UXTerm*font: -*-Monaco-medium-r-*-*-14-*-*-*-*-*-iso8859-*
-!XTerm*font: -*-Monaco-medium-r-*-*-14-*-*-*-*-*-iso8859-*
-UXTerm*faceSize: 10
+!UXTerm*font: Terminus-14
+!XTerm*font: Terminus-14
 
+!XTerm*faceName: Monaco
+!UXTerm*faceName: Monaco
+!XTerm*faceSize: 10
+!UXTerm*faceSize: 10
+!Xft.dpi: 92
+
+XTerm*faceName: Inconsolata
+UXTerm*faceName: Inconsolata
+XTerm*faceSize: 12
+UXTerm*faceSize: 12
+Xft.dpi: 92
+
+!XTerm*faceName: Courier New
+!UXTerm*faceName: Courier New
+!XTerm*faceSize: 12
+!UXTerm*faceSize: 12
+!Xft.dpi: 92
 
 !UXTerm*faceName: DejaVu Sans Mono
 !UXTerm*faceSize: 9
