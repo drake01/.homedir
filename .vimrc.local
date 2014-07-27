@@ -124,7 +124,7 @@ map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 nnoremap \ ,
 set nospell
-map Z :%g/^\s*$/d<CR>``
+map Z :%g/^\s*$/d<CR>``:retab<CR>
 
 "gtags
 "map <C-]> :Gtags<CR><CR>
