@@ -1,7 +1,10 @@
 " About: The file contains extra configuration options . This file is sourced
 " by .vimrc which contains the major configurations as set by the spf13-vim package 
 "
-" Two semicolons are easy to type.
+" NOTES:
+" * use \r instead of \n to replace a character with new line
+"
+"
 imap ;; <Esc>
 
 "http://vim.wikia.com/wiki/Switch_between_Vim_window_splits_easily
@@ -9,255 +12,23 @@ imap ;; <Esc>
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 
-
 set wrap
 set nobackup
 
 set wmh=0
 
 set scrolloff=1
-set textwidth=80
-set textwidth=72
 set textwidth=79
-nnoremap 0 g0
-map <F11> :N<CR>
-map <F12> :n<CR>
-map <F9> :N<CR>
-map <F10> :n<CR>
-"let g:airline_powerline_fonts=0
-"map <C-9> :n<CR>
-"map <C-8> :N<CR>
-"map <C-Y> :n<CR>
 map <C-H> :N<CR>
 map <C-L> :n<CR>
 map H :N<CR>
 map L :n<CR>
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
-"let g:airline_powerline_fonts = 0
-"unlet g:airline_left_sep
-"unlet g:airline_right_sep
 
-"colorscheme synic
-
-"inoremap jj <Esc>
-
-"global session as in firefox tabs
-"nmap HB <ESC> :mksession! ~/.vimsessions/Session.vim<CR>:wqa<CR>
-"
-"function! RestoreSession()
-"   if argc() == 0 "vim called without arguments"
-"        execute 'source ~/.vimsessions/Session.vim'
-"    end
-"endfunction
-"autocmd VimEnter * call RestoreSession()
-"
-"
-"to enable the color settings while restoring sessions."
-"filetype on
-"filetype plugin on
-"filetype indent on
-"syntax on
-
-
-function! ViewHtmlText(url)
-  if !empty(a:url)
-    new
-    setlocal buftype=nofile bufhidden=hide noswapfile
-    " Using lynx.
-    " execute 'r !lynx ' . a:url . ' -dump -nolist -underscore -width ' . winwidth(0)
-    " Using elinks.
-    execute 'r !elinks ' . a:url . ' -dump -dump-width ' . winwidth(0)
-    0d
-  endif
-endfunction
-" Save and view text for current html file.
-nnoremap <Leader>H :update<Bar>:call ViewHtmlText(expand('%:p'))<CR>
-" View text for visually selected url.
-vnoremap <Leader>h "ey:call ViewHtmlText(@e)<CR>
-" View text for url from Linux or Windows clipboard
-" (on Linux, @* is the current selection; use @+ for text in clipboard).
-nnoremap <Leader>h :call ViewHtmlText(@*)<CR>
-
-"To get pdf to vim formatted file using cups and xpdf
- autocmd BufReadPre *.pdf set ro nowrap
- autocmd BufReadPost *.pdf silent !pdftotext "%" -nopgbrk -layout -q -eol unix -
- autocmd BufWritePost *.pdf silent !rm -rf ~/PDF/%
- autocmd BufWritePost *.pdf silent !lp -s -d pdffg "%"
- autocmd BufWritePost *.pdf silent !until [ -e ~/PDF/% ]; do sleep 1; done
- autocmd BufWritePost *.pdf silent !mv ~/PDF/% %:p:h
-
- set shellcmdflag=-ic
- runtime! ftplguin/man.vim
-
-" for go language  git clone https://github.com/jnwhiteh/vim-golang
-  set rtp+=$GOROOT/misc/vim
-  filetype plugin indent on
-  syntax on
 
 " for more than default tabs in vim 
     set tabpagemax=280
 
-"if (&term == 'xterm' || &term =~? '^screen')
-if (&term != 'linux') 
-    " && hostname() == 'my-machine'
-    " On my machine, I use an old Konsole with 256 color support
-  set t_Co=256
-  "  let g:CSApprox_konsole = 1
-endif
-
-
-if getcwd() =~ '/nmap'
-    set nocindent
-    set expandtab
-    set softtabstop=2
-    set shiftwidth=2
-    set copyindent
-endif
-" Vim plugins from go project"
-  set rtp+=$GOROOT/misc/vim
-  filetype plugin indent on
-  syntax on
-
-
-" for tags
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
-nnoremap \ ,
 set nospell
 map Z :%g/^\s*$/d<CR>``:retab<CR>
-
-"gtags
-"map <C-]> :Gtags<CR><CR>
-"map <C-\> :Gtags -r<CR><CR>
-"map <F10> :cclose<CR>
-"map <F11> :cp<CR>
-"map <F12> :cn<CR>
-
-
-
-"autocmd FileType c setlocal foldmethod=syntax
-
-
-" VIM Configuration File
-" Description: Optimized for C/C++ development, but useful also for other things.
-"" Author: Gerhard Gappmeier
-""
-"" set UTF-8 encoding
-"set enc=utf-8
-"set fenc=utf-8
-"set termencoding=utf-8
-"" disable vi compatibility (emulation of old bugs)
-"set nocompatible
-"" use indentation of previous line
-"set autoindent
-"" use intelligent indentation for C
-"set smartindent
-"" configure tabwidth and insert spaces instead of tabs
-"set tabstop=4        " tab width is 4 spaces
-"set shiftwidth=4     " indent also with 4 spaces
-"set expandtab        " expand tabs to spaces
-"" wrap lines at 120 chars. 80 is somewaht antiquated with nowadays displays.
-"set textwidth=120
-"" turn syntax highlighting on
-"set t_Co=256
-"syntax on
-"colorscheme wombat256
-"" turn line numbers on
-"set number
-"" highlight matching braces
-"set showmatch
-"" intelligent comments
-"set comments=sl:/*,mb:\ *,elx:\ */
-"
-"" Install OmniCppComplete like described on [21]http://vim.wikia.com/wiki/C++_code_completion
-"" This offers intelligent C++ completion when typing ‘.’ ‘->’ or <C-o>
-"" Load standard tag files
-"set tags+=~/.vim/tags/cpp
-"set tags+=~/.vim/tags/gl
-"set tags+=~/.vim/tags/sdl
-"set tags+=~/.vim/tags/qt4
-"
-"" Install DoxygenToolkit from [22]http://www.vim.org/scripts/script.php?script_id=987
-"let g:DoxygenToolkit_authorName="Gerhard Gappmeier <gerhard.gappmeier@ascolab.com>" 
-"
-"" Enhanced keyboard mappings
-""
-"" in normal mode F2 will save the file
-"nmap <F2> :w<CR>
-"" in insert mode F2 will exit insert, save, enters insert again
-"imap <F2> <ESC>:w<CR>i
-"" switch between header/source with F4
-"map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
-"" recreate tags file with F5
-"map <F5> :!ctags -R –c++-kinds=+p –fields=+iaS –extra=+q .<CR>
-"" create doxygen comment
-"map <F6> :Dox<CR>
-"" build using makeprg with <F7>
-"map <F7> :make<CR>
-"" build using makeprg with <S-F7>
-"map <S-F7> :make clean all<CR>
-"" goto definition with F12
-"map <F12> <C-]>
-"" in diff mode we use the spell check keys for merging
-"if &diff
-"" diff settings
-"map <M-Down> ]c
-"map <M-Up> [c
-"map <M-Left> do
-"map <M-Right> dp
-"map <F9> :new<CR>:read !svn diff<CR>:set syntax=diff buftype=nofile<CR>gg
-"else
-"" spell settings
-":setlocal spell spelllang=en
-"" set the spellfile - folders must exist
-"set spellfile=~/.vim/spellfile.add
-"map <M-Down> ]s
-"map <M-Up> [s
-"endif
-"""""""""""""""""""""""""""""""""http://www.tummy.com/Community/Presentations/vimpython20070225/vim.html
-
-" " indent.vimrc
-" autocmd BufRead * python setIndentation()
-"
-" python << EOF
-" def setIndentation():
-"    import vim
-"    maxSearch = 1000     #  max number of lines to search through
-"
-"    indentSpaces = None
-"    cb = vim.current.buffer
-"    indentCount = { ' ' : 0, '\t' : 0 }
-"    justSawDefOrClassLine = 0
-"    for i in xrange(0, min(maxSearch, len(cb))):
-"       line = cb[i]
-"       if not line: continue
-"
-"
-"
-"    #for i in xrange(0, min(maxSearch, len(cb))):  [CONTINUED]
-"       #  count spaces after a class or def line
-"       if justSawDefOrClassLine:
-"          justSawDefOrClassLine = 0
-"          if line[0] == ' ':
-"             indentSpaces = 0
-"             for c in line:
-"                if c != ' ': break
-"                indentSpaces = indentSpaces + 1
-"       if line[:4] == 'def ' or line[:6] == 'class ':
-"          justSawDefOrClassLine = 1
-"
-"
-"    #for i in xrange(0, min(maxSearch, len(cb))):  [CONTINUED]
-"       #  add to tab versus space count
-"       if line[0] in ' \t':
-"          indentCount[line[0]] = indentCount.get(line[0], 0) + 1
-"
-"    #  more lines started with space
-"    if indentCount[' '] > indentCount['\t']:
-"       vim.command('set smarttab tabstop=8 expandtab')
-"       if indentSpaces:
-"          vim.command('set ts=%d sw=%d' % ( indentSpaces, indentSpaces ))
-"
-"    #  more lines started with tab
-"    else:
-"       vim.command('set softtabstop=3 ts=3 sw=3')
+map! jj <ESC>
+set nofoldenable
