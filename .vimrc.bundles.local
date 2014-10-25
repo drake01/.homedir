@@ -33,3 +33,4 @@
 "Plugin 'Quicksilver.vim'
 "Plugin 'EasyHtml.vim'
 "Plugin 'jshint.vim'
+"Plugin 'node.js'

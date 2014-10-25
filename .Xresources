@@ -23,6 +23,12 @@ XTerm*font: Terminus-14
 !UXTerm*faceSize: 12
 !Xft.dpi: 92
 
+!XTerm*faceName: Consolas
+!UXTerm*faceName: Consolas
+!XTerm*faceSize: 10
+!UXTerm*faceSize: 10
+!Xft.dpi: 92
+
 !XTerm*faceName: Courier New
 !UXTerm*faceName: Courier New
 !XTerm*faceSize: 12

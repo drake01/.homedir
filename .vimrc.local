@@ -3,6 +3,19 @@
 "
 " NOTES:
 " * use \r instead of \n to replace a character with new line
+" * e.g. say we want text only in double quotes: do it like this:
+"   do a search:
+"   \v(.*)("([^""].*)")(.*)
+"   delete all lines which don't have this pattern:
+"   %v//d
+"   third group contains text within double quotes.do a replace:
+"   %s//\3
+"   tldr:
+"    %v/\v(.*)("([^""].*)")(.*)/d |  %s/\v(.*)("([^""].*)")(.*)/\3
+"   or
+"    search: \v(.*)("([^""].*)")(.*)
+"    command: %v//d |  %s//\3
+"
 "
 "
 imap ;; <Esc>
@@ -26,9 +39,21 @@ map L :n<CR>
 
 
 " for more than default tabs in vim 
-    set tabpagemax=280
+set tabpagemax=280
 
 set nospell
 map Z :%g/^\s*$/d<CR>``:retab<CR>
 map! jj <ESC>
+map! jk <ESC>
 set nofoldenable
+
+if isdirectory(expand("~/.vim/bundle/python-mode"))
+    let g:pymode_lint = 0
+    let g:pymode_lint_on_write = 0
+    let g:pymode_lint_unmodified = 0
+    let g:pymode_lint_on_fly = 1
+endif
+
+if isdirectory(expand("~/.vim/bundle/syntastic"))
+    let g:syntastic_ignore_files = ['\.py$']
+endif
