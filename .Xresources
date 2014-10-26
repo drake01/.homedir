@@ -69,6 +69,10 @@ UXTerm*metaSendsEscape: true
 UXTerm*altSendsEscape: true
 UXTerm*eightBitInput: false
 
+
+XTerm*selectToClipboard: true
+UXTerm*selectToClipboard: true
+
 !copy and paste trouble
 UXTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
 

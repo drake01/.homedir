@@ -56,4 +56,8 @@ endif
 
 if isdirectory(expand("~/.vim/bundle/syntastic"))
     let g:syntastic_ignore_files = ['\.py$', '\.rs$']
-endif
+endif"
+
+set grepprg=grep\ --color=always\ -n\ $*\ /dev/null
+set makeprg=make\ EXTRA_CFLAGS=-fcolor-diagnostic
+map <C-X> :make<CR>

@@ -34,3 +34,4 @@
 "Plugin 'EasyHtml.vim'
 "Plugin 'jshint.vim'
 "Plugin 'node.js'
+Plugin 'Conque-Shell'
