@@ -55,5 +55,5 @@ if isdirectory(expand("~/.vim/bundle/python-mode"))
 endif
 
 if isdirectory(expand("~/.vim/bundle/syntastic"))
-    let g:syntastic_ignore_files = ['\.py$']
+    let g:syntastic_ignore_files = ['\.py$', '\.rs$']
 endif
