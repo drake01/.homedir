@@ -32,18 +32,27 @@ set wmh=0
 
 set scrolloff=1
 set textwidth=79
-map H :N<CR>
-map L :n<CR>
-
+map <C-H> :N<CR>
+map <C-L> :n<CR>
+map H :bp<CR>
+map L :bn<CR>
 
 " for more than default tabs in vim 
 set tabpagemax=280
 
+set history=2000
 set nospell
+set noignorecase
+
 map Z :%g/^\s*$/d<CR>``:retab<CR>
 map! jj <ESC>
 map! jk <ESC>
 set nofoldenable
+
+set grepprg=grep\ --color=always\ -n\ $*\ /dev/null
+set makeprg=make\ EXTRA_CFLAGS=-fcolor-diagnostic
+map <C-X> :make<CR>
+map <C-X> :!cargo run<CR>
 
 if isdirectory(expand("~/.vim/bundle/python-mode"))
     let g:pymode_lint = 0
@@ -56,9 +65,3 @@ if isdirectory(expand("~/.vim/bundle/syntastic"))
     let g:syntastic_ignore_files = ['\.py$', '\.rs$']
 endif
 
-set grepprg=grep\ --color=always\ -n\ $*\ /dev/null
-set makeprg=make\ EXTRA_CFLAGS=-fcolor-diagnostic
-map <C-X> :make<CR>
-map <C-X> :!cargo run<CR>
-map <C-H> :bp<CR>
-map <C-L> :bn<CR>
