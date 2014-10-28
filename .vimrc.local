@@ -43,6 +43,7 @@ set tabpagemax=280
 set history=2000
 set nospell
 set noignorecase
+let g:snips_author = 'Gulshan Kumar <drakeoone@gmail.com>'
 
 map Z :%g/^\s*$/d<CR>``:retab<CR>
 map! jj <ESC>
