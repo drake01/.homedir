@@ -1,23 +1,6 @@
 " About: The file contains extra configuration options . This file is sourced
 " by .vimrc which contains the major configurations as set by the spf13-vim package 
 "
-" NOTES:
-" * use \r instead of \n to replace a character with new line
-" * e.g. say we want text only in double quotes: do it like this:
-"   do a search:
-"   \v(.*)("([^""].*)")(.*)
-"   delete all lines which don't have this pattern:
-"   %v//d
-"   third group contains text within double quotes.do a replace:
-"   %s//\3
-"   tldr:
-"    %v/\v(.*)("([^""].*)")(.*)/d |  %s/\v(.*)("([^""].*)")(.*)/\3
-"   or
-"    search: \v(.*)("([^""].*)")(.*)
-"    command: %v//d |  %s//\3
-"
-"
-"
 imap ;; <Esc>
 
 "http://vim.wikia.com/wiki/Switch_between_Vim_window_splits_easily
@@ -48,7 +31,7 @@ let g:snips_author = 'Gulshan Kumar <drakeoone@gmail.com>'
 map Z :%g/^\s*$/d<CR>``:retab<CR>
 map! jj <ESC>
 map! jk <ESC>
-set nofoldenable
+"set nofoldenable
 
 set grepprg=grep\ --color=always\ -n\ $*\ /dev/null
 set makeprg=make\ EXTRA_CFLAGS=-fcolor-diagnostic
@@ -66,3 +49,4 @@ if isdirectory(expand("~/.vim/bundle/syntastic"))
     let g:syntastic_ignore_files = ['\.py$', '\.rs$']
 endif
 
+"let g:ackprg = "/usr/local/bin/ag"
