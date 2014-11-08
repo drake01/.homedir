@@ -32,8 +32,9 @@ map Z :%g/^\s*$/d<CR>``:retab<CR>
 map! jj <ESC>
 map! jk <ESC>
 "set nofoldenable
+set foldenable
 
-set grepprg=grep\ --color=always\ -n\ $*\ /dev/null
+"set grepprg=grep\ --color=always\ -n\ $*\ /dev/null
 set makeprg=make\ EXTRA_CFLAGS=-fcolor-diagnostic
 map <C-X> :make<CR>
 map <C-X> :!cargo run<CR>
@@ -49,4 +50,4 @@ if isdirectory(expand("~/.vim/bundle/syntastic"))
     let g:syntastic_ignore_files = ['\.py$', '\.rs$']
 endif
 
-"let g:ackprg = "/usr/local/bin/ag"
+"let g:ackprg = 'ag --nocolor --column --smart-case'
