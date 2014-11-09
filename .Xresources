@@ -148,7 +148,11 @@ UXTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CU
 xterm*background: #000000
  
  
-xterm*cursorColor: #ff0000
+!xterm*cursorColor: #ff0000
+!xterm*cursorColor: #00ff00
+!xterm*cursorColor: #00db00
+!xterm*cursorColor: #009100
+xterm*cursorColor: #00ec00
 !xterm*cursorColor: #57fd76
 !xterm*cursorColor: yellow
 !xterm*cursorColor: orange
