@@ -32,8 +32,7 @@ let g:snips_author = 'Gulshan Kumar <drakeoone@gmail.com>'
 map Z :%g/^\s*$/d<CR>``:retab<CR>
 map! jj <ESC>
 map! jk <ESC>
-"set nofoldenable
-set foldenable
+set nofoldenable
 
 "set grepprg=grep\ --color=always\ -n\ $*\ /dev/null
 set makeprg=make\ EXTRA_CFLAGS=-fcolor-diagnostic
