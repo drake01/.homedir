@@ -1,7 +1,7 @@
 " About: The file contains extra configuration options . This file is sourced
 " by .vimrc which contains the major configurations as set by the spf13-vim package 
 "
-imap ;; <Esc>
+"imap ;; <Esc>
 set shell=/bin/bash
 
 "http://vim.wikia.com/wiki/Switch_between_Vim_window_splits_easily
