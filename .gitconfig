@@ -1,0 +1,13 @@
+[user]
+	name = drake01
+	email = drakeoone@gmail.com
+[color]
+	ui = auto
+[alias]
+	st = status
+	ci = commit
+	up = pull
+[core]
+	autocrlf = false
+	filemode = false
+	editor = vim
