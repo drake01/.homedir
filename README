@@ -3,3 +3,8 @@ Frequently used important config files for personal usage..
 Free to use the files under the GPL v3.. 
 
 For licence look for GPL V3 using any search engine.. 
+
+HELP:
+
+bash$ TARGET_DIR=~/; for i in ~/homedir/.[^.]*; do ln -s $i $TARGET_DIR; echo "$i --->done";echo;  done; rm $TARGET_DIR/.git; ls -la $TARGET_DIR
+
