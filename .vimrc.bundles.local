@@ -21,7 +21,7 @@
 "Plugin 'SuperTab'
 "Plugin 'SuperTab-continued.'
 "Plugin 'python-tools'
-Plugin 'go.vim'
+"Plugin 'go.vim'
 "Plugin 'gtags.vim'
 "Plugin 'node.js'
 "Plugin 'nodeunit.vim'
