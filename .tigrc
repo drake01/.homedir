@@ -1,11 +1,34 @@
 # tig configuration file.
 
+# Original source: http://ruderich.org/simon/config/tigrc
 
-# Show the revision graph like gitk does.
-set show-rev-graph = yes
+# Copyright (C) 2011-2015  Simon Ruderich
+#
+# This file is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This file is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this file.  If not, see <http://www.gnu.org/licenses/>.
 
-# Use relative dates.
-set show-date = relative
+
+# Don't display uncommitted changes.
+set show-changes = no
+
+# Ignore case when searching.
+set ignore-case = yes
+
+
+# DISPLAY
+
+# Same as the default, but use relative dates.
+set main-view = date:relative author:full commit-title:yes,graph,refs
 
 
 # BINDINGS
@@ -22,15 +45,23 @@ bind generic * move-last-line
 # Close current view like in mutt.
 bind diff i view-close
 
+# Unbind unnecessary views. I only use the main view and view diffs of
+# commits.
+bind generic m none
+bind generic d none
+bind generic l none
+bind generic t none
+bind generic f none
+bind generic b none
+bind generic r none
+bind generic s none
+bind generic S none
+bind generic c none
+bind generic y none
+bind generic g none
+bind generic p none
 # Unbind commands which may change the repository. I use tig only as a viewer.
-bind generic u none
-bind generic ! none
-bind generic M none
-bind generic @ none
-bind generic e none
-bind generic G none
-bind generic C none
-bind generic i none
+bind main C none
 
 
 # COLORS
@@ -42,7 +73,8 @@ color delimiter default default # ~ if text is too long
 
 # Main window.
 color cursor         black   cyan         # currently selected line
-color main-author    default default      # just 'author' in newer versions
+color author         default default
+color graph-commit   magenta default      # commit dots in graph
 color main-head      green   default bold # HEAD
 color main-ref       green   default      # branches
 color main-remote    yellow  default      # remote branches
@@ -50,19 +82,17 @@ color main-tag       yellow  default bold # tags
 color main-local-tag yellow  default bold # local tags (normal tags)
 
 # Information at the top of the commit diff.
-color commit    default default
-color pp-adate  default default
-color pp-cdate  default default
-color pp-author default default
-color pp-commit default default
-color pp-merge  default default
-color pp-date   default default
-color pp-adate  default default
-color pp-cdate  default default
-color pp-refs   default default
+color commit                default default
+color "Author: "            default default
+color "Commit: "            default default
+color pp-merge              default default
+color "Date: "              default default
+color "AuthorDate: "        default default
+color "CommitDate: "        default default
+color pp-refs               default default
 # Special parts of the commit message.
-color signoff   default default
-color acked     default default
+color "    Signed-off-by"   default default
+color "    Acked-by"        default default
 
 # Diff coloring.
 color diff-header default default bold # diff --git a/.. b/..
