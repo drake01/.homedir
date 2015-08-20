@@ -1,11 +1,24 @@
-set editing-mode vi
-#set editing-mode vi set keymap vi
-set keymap vi 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # Configuration file for readline.
+#
+# Original source: http://ruderich.org/simon/config
+
+# Copyright (C) 2011-2015  Simon Ruderich
+#
+# This file is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This file is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this file.  If not, see <http://www.gnu.org/licenses/>.
 
 
-# Only one <tab> is necessary to get a list of all possible options.
+# Only one <Tab> is necessary to get a list of all possible options.
 set show-all-if-ambiguous on
 set show-all-if-unmodified on
 
@@ -23,20 +36,25 @@ set editing-mode vi
 
 # KEY BINDINGS
 
+# Insert mode.
+
 # Use jj and jk to exit insert mode.
 "jj": vi-movement-mode
 "jk": vi-movement-mode
 
-"\C-p": previous-history
-"\C-n": next-history
+# <Up>/<Down> with the additional effect that only lines starting with the
+# current input are matched. Very useful to recall old commands quickly - just
+# type the first few characters.
+"\C-p": history-search-backward
+"\C-n": history-search-forward
 
-# Edit using a single line:
-#set horizontal-scroll-mode On
+# Allow <C-L> in Vi normal mode to clear the screen.
+"\C-L": clear-screen
 
-# Rebind some keys:
-Meta-h: backward-kill-word
-"\C-u": universal-argument
-"\C-x\C-r": re-read-init-file
+# Command mode.
+set keymap vi
+
+# No bindings yet.
 
 #Meta key not working in uxterm
     set meta-flag on
