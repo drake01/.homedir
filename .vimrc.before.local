@@ -1,7 +1,8 @@
 let g:spf13_keep_trailing_whitespace = 1
-let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'python', 'javascript', 'html', 'misc', 'elixir', 'go']
+let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'python', 'javascript', 'html', 'misc', 'go']
 "let g:airline_powerline_fonts = 1
 let g:spf13_no_autochdir = 1
 let g:spf13_use_powerline = 1
 let g:spf13_no_fastTabs = 1
 let g:spf13_no_wrapRelMotion = 1
+"let g:spf13_clear_search_highlight = 1
