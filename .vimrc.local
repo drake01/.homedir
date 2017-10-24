@@ -22,8 +22,7 @@ map H :bp<CR>
 map L :bn<CR>
 
 " for more than default tabs in vim 
-set tabpagemax=280
-
+set tabpagemax=100
 set history=2000
 set nospell
 set noignorecase
