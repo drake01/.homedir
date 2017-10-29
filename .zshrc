@@ -15,3 +15,6 @@ zstyle ':completion:*' hosts off
 zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
+
+HISTSIZE=99999999
+SAVEHIST=$HISTSIZE
