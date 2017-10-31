@@ -50,3 +50,9 @@ if isdirectory(expand("~/.vim/bundle/syntastic"))
 endif
 
 "let g:ackprg = 'ag --nocolor --column --smart-case'
+"linux configuration
+set shiftwidth=8
+set noexpandtab
+set tabstop=8
+set softtabstop=8
+"/ linux configuration
