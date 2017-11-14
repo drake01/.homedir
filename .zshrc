@@ -1,5 +1,5 @@
 export ZSH=$HOME/.oh-my-zsh
-[[ $TERM != "screen-256color" ]] && [[ $TERM != "linux" ]] && [[ $TERM != "st-256color" ]] && tmux -u && exit
+# [[ $TERM != "screen-256color" ]] && [[ $TERM != "linux" ]] && [[ $TERM != "st-256color" ]] && tmux -u && exit
 ZSH_THEME="dre"
 source $ZSH/oh-my-zsh.sh
 export EDITOR='vim'
