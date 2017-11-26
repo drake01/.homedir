@@ -7,9 +7,4 @@ $FG[032]%1~\
 $FG[105]%(!.#. $)%{$reset_color%} '
 PROMPT2='%{$fg[red]%}\ %{$reset_color%}'
 RPS1='${return_code}'
-if type "virtualenv_prompt_info" > /dev/null
-then
-    RPROMPT='$(virtualenv_prompt_info)'
-else
-    RPROMPT=''
-fi
+RPROMPT='$(virtualenv_prompt_info)' && type "virtualenv_prompt_info" > /dev/null || ''
