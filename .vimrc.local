@@ -16,8 +16,8 @@ set wmh=0
 
 set scrolloff=1
 set textwidth=79
-map <C-H> :N<CR>
-map <C-L> :n<CR>
+"map <C-H> :N<CR>
+"map <C-L> :n<CR>
 map H :bp<CR>
 map L :bn<CR>
 
