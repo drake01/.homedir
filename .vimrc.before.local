@@ -10,3 +10,4 @@ let g:spf13_no_wrapRelMotion = 1
 let g:spf13_consolidated_directory = $HOME . '/.vims/'
 " let g:airline_solarized_bg='light'
 let g:airline_theme = 'term'
+" let g:airline_powerline_fonts=1
