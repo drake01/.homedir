@@ -1,5 +1,5 @@
 [user]
-	name = drake01
+	name = Gulshan
 	email = drakeoone@gmail.com
 [color]
 	ui = auto
@@ -17,6 +17,8 @@
 	pending = codereview pending
 	submit = codereview submit
 	sync = codereview sync
+    lg     = log --graph --pretty=format:'%Cblue%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
 
 [core]
 	autocrlf = false
