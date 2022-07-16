@@ -15,7 +15,8 @@ set nobackup
 set wmh=0
 
 set scrolloff=1
-set textwidth=79
+"set textwidth=79
+set textwidth=120
 map <C-H> :bp<CR>
 map <C-L> :bn<CR>
 " map H :bp<CR>
@@ -56,6 +57,7 @@ endif
 " set noexpandtab
 " set tabstop=8
 " set softtabstop=8
+ set ic
 
 "/ linux configuration
 let g:ale_fixers = { 'elixir': ['mix_format']  }
